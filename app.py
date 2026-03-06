@@ -6,10 +6,9 @@ import pickle
 #load model
 model=pickle.load(open('pipe.pkl','rb'))
 
-def predict(data):
-    
+def predict(data): 
     ans = model.predict(data)
-    
+        
 def main():
      st.title('Titanic Survival Chance !!!')  
      
@@ -25,19 +24,17 @@ def main():
         "Age": [Age],
         "Fare": [fare],
         "Embarked": [Embarked]
-      })
+     })
      
      if st.button('predict'):
          result=predict(data)
-          if result == 1:
+         
+         if result ==1:
               st.success("Survived ✅") 
-          else:
-             st.error('Not Survived ❌')
+         else:
+             st.error( 'Not Survived ❌')
+         
          
 if __name__ == '__main__':
   main()
           
-
-         
-
-
