@@ -25,11 +25,10 @@ def main():
         "Age": [Age],
         "Fare": [fare],
         "Embarked": [Embarked]
-    })
+      })
      
      if st.button('predict'):
          result=predict(data)
-         
           if result == 1:
               st.success("Survived ✅") 
           else:
@@ -40,4 +39,5 @@ if __name__ == '__main__':
           
 
          
+
 
