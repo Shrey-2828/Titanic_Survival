@@ -32,7 +32,7 @@ def main():
          
           if result == 1:
               st.success("Survived ✅") 
-         else:
+          else:
              st.error('Not Survived ❌')
          
 if __name__ == '__main__':
@@ -40,3 +40,4 @@ if __name__ == '__main__':
           
 
          
+
