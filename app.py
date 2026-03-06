@@ -10,13 +10,6 @@ def predict(data):
     
     ans = model.predict(data)
     
-    if ans[0]==1:
-     return 'Survived ✅'
-    
-    else:
-     return 'Not Survived ❌'
-    
-    
 def main():
      st.title('Titanic Survival Chance !!!')  
      
@@ -36,9 +29,14 @@ def main():
      
      if st.button('predict'):
          result=predict(data)
-         st.success(result)
+         
+          if result == 1:
+              st.success("Survived ✅") 
+         else:
+             st.error('Not Survived ❌')
          
 if __name__ == '__main__':
   main()
           
+
          
